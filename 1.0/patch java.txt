@@ -1,0 +1,7 @@
+ cp ~/server/tomcat/webapps/ttsvr/WEB-INF/lib/cloudmall-3.6.0-SNAPSHOT.jar .
+ mv cloudmall-3.6.0-SNAPSHOT.jar cloudmall-3.6.0-SNAPSHOT.jar.bak
+ cp ~/server/tomcat/webapps/ttsvr/WEB-INF/lib/cloudmall-3.6.0-SNAPSHOT.jar .
+ jar -xf patch20161213.jar 
+ jar -uvf cloudmall-3.6.0-SNAPSHOT.jar tooltwist/cloudmall/cin7/InsertOrderDetails.class 
+ cp cloudmall-3.6.0-SNAPSHOT.jar ~/server/tomcat/webapps/ttsvr/WEB-INF/lib/.
+ restart tomcat
